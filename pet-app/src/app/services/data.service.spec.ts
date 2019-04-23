@@ -97,8 +97,8 @@ describe('DataService', () => {
 
     const maleOwnedDogs: string[] = [
       'Alpha',
-      'Gamma',
       'Doggy',
+      'Gamma',
     ];
 
     const femaleOwnedCats: string[] = [

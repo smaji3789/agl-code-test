@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PetDetailsComponent } from './components/pet-details/pet-details.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ShowPetsComponent } from './components/show-pets/show-pets.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PetDetailsComponent
+    PetDetailsComponent,
+    ShowPetsComponent
   ],
   imports: [
     BrowserModule,

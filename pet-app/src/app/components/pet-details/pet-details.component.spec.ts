@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PetDetailsComponent } from './pet-details.component';
+import { ShowPetsComponent } from '../show-pets/show-pets.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('PetDetailsComponent', () => {
@@ -9,7 +10,7 @@ describe('PetDetailsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PetDetailsComponent ],
+      declarations: [ PetDetailsComponent, ShowPetsComponent ],
       imports: [ HttpClientTestingModule ]
     })
     .compileComponents();
