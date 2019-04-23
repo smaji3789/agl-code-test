@@ -15,6 +15,15 @@ export class PetDetailsComponent implements OnInit {
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
+    this.dataService.getPetOwners().subscribe(
+      masters => {
+        this.petsOwnedByMale = this.dataService
+          .sortPetsByOwner(masters, 'Male', 'Cat');
+
+        this.petsOwnedByFemales = this.dataService
+          .sortPetsByOwner(masters, 'Female', 'Cat');
+      }
+    );
   }
 
 }

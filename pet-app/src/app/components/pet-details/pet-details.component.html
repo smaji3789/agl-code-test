@@ -1,3 +1,10 @@
-<p>
-  pet-details works!
-</p>
+<section>
+  <h1>Male</h1>
+  <ul>
+      <li *ngFor="let pet of petsOwnedByMale">{{ pet.name }}</li>
+  </ul>
+  <h1>Female</h1>
+  <ul>
+      <li *ngFor="let pet of petsOwnedByFemales">{{ pet.name }}</li>
+  </ul>
+</section>

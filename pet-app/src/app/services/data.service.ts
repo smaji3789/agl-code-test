@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Pet } from '../models/pet/pet';
 import { Master } from '../models/master/master';
 import { Observable } from 'rxjs';
-import { environment } from '../../environments/environment.prod';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -20,7 +20,8 @@ export class DataService {
 
   public sortPetsByOwner(masters: Master[], gender: string, type: string): Pet[] {
     return masters
-      .filter((master: Master) => master.gender === gender)
+      .filter((master: Master) => 
+      master.gender === gender)
       .reduce((petContainer: Pet[], currentObj: Master) => {
         petContainer.push(...currentObj.pets);
         return petContainer;
